@@ -6,7 +6,7 @@ Spilch looks through your Gmail for first-contact pitches (agencies, tools, link
 
 ## Use it
 
-1. Add the plugin from the Claude directory, or in Claude Code run `/plugin install spilch --marketplace asder-x-y-z/spilch`. Connect Gmail in your assistant's connectors.
+1. Add the plugin from the Claude directory, or in Claude Code run `/plugin install spilch --marketplace Spilch-com/spilch`. Connect Gmail in your assistant's connectors.
 2. Optional: connect the Spilch connector from the plugin's **Connectors** tab, for short links with click counts and weekly numbers.
 3. Say **Spilch**. Within a minute you get your first real draft, a list of other recent pitches, and four quick choices: when replies go out (drafts only, after 24 hours, or right away for the ones you pick), a morning check, how much Spilch learns about the companies that pitch you, and whether replies end with "Sent with /spilch". Spilch never sends a reply you haven't seen listed.
 
