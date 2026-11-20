@@ -1,0 +1,23 @@
+{
+  "name": "spilch",
+  "displayName": "Spilch",
+  "version": "1.0.0",
+  "description": "Answer cold pitches instead of deleting them. Spilch finds the pitches in your Gmail, writes a short, kind no in your voice with one or two genuinely useful recommendations for the sender, and saves it as a draft. You choose when anything is sent.",
+  "author": {
+    "name": "Asder S.R.L.",
+    "email": "i@asder.xyz",
+    "url": "https://spilch.com"
+  },
+  "homepage": "https://spilch.com",
+  "repository": "https://github.com/asder-x-y-z/spilch-plugin",
+  "license": "MIT",
+  "keywords": [
+    "email",
+    "gmail",
+    "cold email",
+    "inbox",
+    "replies"
+  ],
+  "icon": "assets/icon.png",
+  "privacyPolicyUrl": "https://spilch.com/privacy"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "spilch": {
+      "type": "http",
+      "url": "https://spilch.com/mcp/core"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "spilch",
+  "owner": {
+    "name": "Asder S.R.L.",
+    "email": "i@asder.xyz"
+  },
+  "plugins": [
+    {
+      "name": "spilch",
+      "source": "./",
+      "description": "Answer cold pitches in Gmail with a kind no and a useful recommendation, saved as a draft."
+    }
+  ],
+  "description": "Spilch: answer cold pitches with a kind no and a useful recommendation."
+}
