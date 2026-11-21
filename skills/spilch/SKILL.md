@@ -1,6 +1,6 @@
 ---
 name: spilch
-description: Answer cold pitches in Gmail with a short, kind reply that recommends something useful to the sender, saved as a draft. Use when the user says Spilch, Spilch it or /spilch, asks to deal with cold email, sales pitches, recruiters, vendors or agency outreach, wants to "say no" to pitches in bulk, asks about their Spilch drafts, clicks, settings or vouches, wants to vouch for something or link their email to Spilch, or when a scheduled Spilch run starts.
+description: Answer cold pitches in Gmail with a short, kind reply that recommends something useful to the sender, saved as a draft. Use when the user says Spilch, Spilch it or /spilch, asks to deal with cold email, sales pitches, recruiters, vendors or agency outreach, wants to "say no" to pitches in bulk, asks about their Spilch drafts, clicks, settings or vouches, wants a Spilch reply redone ("Spilch it again"), wants to vouch for something or link their email to Spilch, or when a scheduled Spilch run starts.
 ---
 
 # Spilch
