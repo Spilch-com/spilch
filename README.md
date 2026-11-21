@@ -15,7 +15,7 @@ After that, say **Spilch** any time for new pitches and **Spilch it** to reply t
 Optional, with the Spilch connector:
 
 - **Vouch.** Tell Spilch what you would recommend to a stranger: your business, a niche tool, someone worth following. Your assistant can suggest candidates from your website and inbox; you tick what you vouch for, and those picks go into your own replies when they fit the sender.
-- **Link your email.** Your assistant sends one short email from your mailbox to verify@spilch.com. Then you can recover your Spilch from another assistant or mailbox, and an address on your business domain gives it a verified mark. Change anything by chat: "send after 24 hours", "shorter replies", "no signature", "share nothing".
+- **Save your Spilch.** Your Spilch lives in a Gmail draft called "Spilch settings (keep this draft)". Say *save my Spilch* and your assistant sends one short email from your mailbox to verify@spilch.com; your links, clicks and vouches then stay yours even if that draft goes or you switch assistant or mailbox, and an address on your business domain gives it a verified mark. Change anything by chat: "send after 24 hours", "shorter replies", "no signature", "share nothing".
 
 ## What it does with your data
 

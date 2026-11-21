@@ -16,6 +16,8 @@ Settings live in the user's mailbox so every chat and scheduled run finds them: 
   "sharing": "rich",
   "spilch_line": true,
   "email_linked": false,
+  "save_asked": 0,
+  "save_asked_at": "",
   "send_since": "2026-11-17",
   "history": [ { "brand": "Codeloom", "drafted": "2026-11-17", "shown": true } ],
   "last_run": ""
@@ -27,7 +29,7 @@ Settings live in the user's mailbox so every chat and scheduled run finds them: 
 - `sharing`: `rich` (Company details), `facts` (Basic facts) or `minimal` (Nothing). Older settings: `share_pitch_facts: false` means `minimal`, `true` means `facts`.
 - `send_since`: the date `send` was last changed; only drafts written after it are sent.
 - `spilch_line`: the `Sent with /spilch` signature line, on unless the user turned it off.
-- `email_linked`: true once `spilch_account` shows `verified` (`references/account.md`).
+- `email_linked`: true once `spilch_account` shows `verified` (`references/account.md`). `save_asked` and `save_asked_at` track the save nudge: at most 3 times, 14 days apart.
 - `history`: one entry per answered brand: `drafted` date, and `shown: true` once the user has seen it in a list or summary.
 - Keep `history` to the last 100 brands.
 

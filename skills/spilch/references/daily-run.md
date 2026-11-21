@@ -9,7 +9,7 @@
    - `send` is `24h` or `now` and you have a send tool: send only drafts the user picked, labelled, or was shown in an earlier summary. Re-read each thread first and skip any where the sender or the user wrote since, or the draft was deleted or emptied. If sending needs approval, ask once for the batch; in a scheduled run with nobody there, list them instead.
    - Otherwise list them: "2 drafts are ready in Gmail; press send when you like."
 5. Log pitch facts at the `sharing` level (`inbox-check.md`).
-6. Summary in the shape from `summaries.md`, three lines at most. Then update `last_run` and `history`.
+6. Summary in the shape from `summaries.md`, three lines at most, plus the save nudge from `account.md` when it applies. Then update `last_run` and `history`.
 
 Never send a reply before it has waited 24 hours as a draft, unless the user says "send now", or chose `send: now` and picked or labelled that email themselves. "Stop [name]" or deleting a draft cancels it.
 
