@@ -2,7 +2,7 @@
 
 Answer cold pitches instead of deleting them.
 
-Spilch looks through your Gmail for first-contact pitches (agencies, tools, link building, recruiters, partnership offers), writes a short, kind no in your own voice, and adds one or two recommendations that genuinely help the sender: a tool they could use, a good read in their field, a community worth joining, or something you or another Spilch user vouches for. Each reply is saved as a draft in the same thread, labelled Spilch. You decide when anything is sent.
+Spilch looks through your Gmail for first-contact pitches (agencies, tools, link building, recruiters, partnership offers), writes a short, kind no in your own voice, and adds one or two recommendations that genuinely help the sender: a tool they could use, a good read in their field, a community worth joining, or something you vouch for. Each reply is saved as a draft in the same thread, labelled Spilch. You decide when anything is sent.
 
 ## Use it
 
@@ -14,7 +14,7 @@ After that, say **Spilch** any time for new pitches and **Spilch it** to reply t
 
 Optional, with the Spilch connector:
 
-- **Vouch.** Tell Spilch what you would recommend to a stranger: your business, a niche tool, someone worth following. Your assistant can suggest candidates from your website and inbox; you tick what you vouch for. Your own things can appear in other Spilch users' replies, with the name you choose.
+- **Vouch.** Tell Spilch what you would recommend to a stranger: your business, a niche tool, someone worth following. Your assistant can suggest candidates from your website and inbox; you tick what you vouch for, and those picks go into your own replies when they fit the sender.
 - **Link your email.** Your assistant sends one short email from your mailbox to verify@spilch.com. Then you can recover your Spilch from another assistant or mailbox, and an address on your business domain gives it a verified mark. Change anything by chat: "send after 24 hours", "shorter replies", "no signature", "share nothing".
 
 ## What it does with your data

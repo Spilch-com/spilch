@@ -3,7 +3,7 @@
 For each picked or labelled email:
 
 1. Read the thread. If it turns out personal, from someone the user knows, or already answered, skip it and say so in a few words.
-2. Pick one or two recommendations (rules below). Three only when each clearly helps. With the Spilch connector, call `spilch_match` first with the sender's topics (topics only, no names) and prefer its picks when they fit.
+2. Pick one or two recommendations (rules below). Three only when each clearly helps. With the Spilch connector, look at the user's vouches first (`spilch_vouch` with `action: "list"`) and prefer one when it fits the sender.
 3. With the Spilch connector, call `spilch_create_link` for each link (uid, url, a short label like "seo agency"; never names or addresses) and use the `short_url`, so clicks can be counted.
 4. Save the reply as a **draft reply in the same thread** and apply the `Spilch` label if the tools allow. Add the brand to `history` in the settings with today's date as `drafted`.
 
@@ -40,7 +40,7 @@ Sent with <a href="https://spilch.com">/spilch</a>
 - a tool or service they would plausibly need;
 - a genuinely good, recent read, report or guide in their field (prefer the last 12 months);
 - a well-known newsletter, podcast or community in their field (prefer publications over private individuals);
-- something the user vouched for, or another Spilch user vouched for (from `spilch_match`). A pick with `on_spilch` and a `by_name` is a person on Spilch: credit them in the sentence, e.g. "Lena Ortiz's guest one-sheet kit (she's on /spilch)";
+- something the user vouched for;
 - the user's own link from the settings, only when it truly fits this sender.
 
 Niche beats famous: one sharp, specific pick is better than a household brand.
