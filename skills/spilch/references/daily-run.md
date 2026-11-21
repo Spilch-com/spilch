@@ -11,6 +11,8 @@
 5. Log pitch facts at the `sharing` level (`inbox-check.md`).
 6. Summary in the shape from `summaries.md`, three lines at most, plus the save nudge from `account.md` when it applies. Then update `last_run` and `history`.
 
+**Nothing new? Don't disturb.** If this run found no new pitches, wrote and sent nothing, has no drafts due and no answers from senders: in a scheduled run, still update `last_run`, then end with exactly "Nothing new." and nothing else (no summary, no tips, no save nudge, no questions). When the user asked, one line: "No new pitches since <day>." The save nudge only rides along in a run that already has something to report.
+
 Never send a reply before it has waited 24 hours as a draft, unless the user says "send now", or chose `send: now` and picked or labelled that email themselves. "Stop [name]" or deleting a draft cancels it.
 
 ## Scheduled task
@@ -18,7 +20,7 @@ Never send a reply before it has waited 24 hours as a draft, unless the user say
 If the user turns the morning check on and the assistant can schedule tasks, create one at the chosen time (default 09:00 local) with this prompt:
 
 ```
-Run Spilch's daily run with the Spilch skill: read my "Spilch settings (keep this draft)" draft in Gmail, check new cold pitches since the last run, draft replies following my settings, handle drafts older than 24 hours by my sending setting, and give me the short summary.
+Run Spilch's daily run with the Spilch skill: read my "Spilch settings (keep this draft)" draft in Gmail, check new cold pitches since the last run, draft replies following my settings, handle drafts older than 24 hours by my sending setting, and give me the short summary. If there is nothing new, reply only "Nothing new." and don't ask me anything.
 ```
 
 If it can't schedule, say once: "Say *Spilch* any morning and I'll do the same check."
