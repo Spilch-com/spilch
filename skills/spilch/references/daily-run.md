@@ -1,4 +1,4 @@
-# Daily run and "Spilch now"
+# Daily run, "Spilch" and "Spilch it"
 
 1. Read the newest settings draft.
 2. Draft replies for emails the user labelled `Spilch` themselves: labelled threads with no Spilch draft, no reply from the user, and a brand not in `history`. A deleted draft means the user cancelled it; leave it. With `send: now`, send each right after writing it.
