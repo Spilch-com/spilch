@@ -3,7 +3,7 @@
 For each picked or labelled email:
 
 1. Read the thread. If it turns out personal, from someone the user knows, or already answered, skip it and say so in a few words.
-2. **Network pick first.** With the Spilch connector, call `spilch_find_pick` with the uid and 2 to 5 topics about what the sender does or sells ("seo", "agencies"); never names, addresses or email text. If a pick truly helps this sender, call `spilch_create_link` with the uid and its `pick_id` and use the `short_url`; that counts the mention for whoever added it. At most one network pick per reply. No pick, or none that fits: go on without one.
+2. **Network pick first.** With the Spilch connector, call `spilch_find_pick` with the uid and 2 to 5 topics about what the sender does or sells ("seo", "agencies"); never names, addresses or email text. If a pick truly helps this sender, call `spilch_create_link` with the uid and its `pick_id` and use the `short_url`; that counts the mention for whoever added it. Use every pick that truly helps this sender: one or two is usual, three at most, and never one that doesn't fit. No pick, or none that fits: go on without one.
 3. You may add one recommendation of your own (rules below), or use it alone when there was no pick. For those, call `spilch_create_link` with the url and a short label like "seo agency", so clicks can be counted.
 4. Save the reply as a **draft reply in the same thread** and apply the `Spilch` label if the tools allow. Add the brand to `history` in the settings with today's date as `drafted`.
 
@@ -43,7 +43,7 @@ Sent with <a href="https://spilch.com">/spilch</a>
 
 If nothing fits, a well-known free resource for their field, or nothing: a kind no on its own is fine.
 
-**Network picks are anonymous.** Write them like any other recommendation. Never say or guess who added one, and never call it sponsored or a partner. The user's own links are not put in their own replies; they travel in other people's.
+**Network picks are anonymous.** Write them like any other recommendation. Never say or guess who added one, and never call it sponsored or a partner. The user's own link (from `spilch_links`, action `list`) can go in their own reply too, when it truly fits this sender: link it with `spilch_create_link` and its url. That is not a network mention; mentions come from other people's replies.
 
 **Real and checked.** Every link must exist. Find it with web search and open it with web fetch when you can; use the canonical page. Never invent a URL, title, author, statistic or discount. If you can't check links, recommend only widely known tools and publications by their homepage.
 
