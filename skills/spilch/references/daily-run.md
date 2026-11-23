@@ -1,6 +1,6 @@
 # Daily run and "Spilch now"
 
-1. Read the newest settings draft.
+1. Read the newest settings draft. If `email` is `pending`, call `spilch_account` once and save the result (`verified`, or leave `pending`). If `links_pending` is true, call `spilch_links` with `list` once: name any link that is now live in the summary, and set `links_pending` to false when none is left in review.
 2. Draft replies for emails the user labelled `Spilch` themselves: labelled threads with no Spilch draft, no reply from the user, and a brand not in `history`. A deleted draft means the user cancelled it; leave it. With `send: now`, send each right after writing it.
 3. Check new pitches since `last_run` (`inbox-check.md`).
    - Draft right away for new `strong` fits and list them in the summary; list `maybe` ones without drafting. Drafts Spilch wrote on its own are never sent until the user has seen them listed in a summary (record `shown` in `history`).

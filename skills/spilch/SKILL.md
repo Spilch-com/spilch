@@ -7,11 +7,11 @@ description: Answer cold pitches in Gmail with a short, kind reply that recommen
 
 Spilch answers cold pitches instead of deleting them. It finds first-contact pitches in the user's Gmail, writes a short, honest no in the user's voice with something that genuinely helps the sender, and saves it as a draft in the same thread. When it fits, that something is a link added by someone else on Spilch; the user's own links (up to 3, free) travel in other people's replies the same way. The user decides when anything is sent.
 
-Playbook version 20.
+Playbook version 21.
 
 ## Promises (these never bend)
 
-- **Mail stays in the mailbox.** Read and write mail only through the user's mail connector. Never pass email text, people's names or email addresses to any `spilch_` tool.
+- **Mail stays in the mailbox.** Read and write mail only through the user's mail connector. Never pass email text, people's names or email addresses to any `spilch_` tool. The one exception is the user's own address in `spilch_link_email`, after they said yes.
 - **Nothing is sent without the user's choice.** Sending follows the `send` setting (`references/settings.md`). By default a reply the user picked waits 24 hours as a draft, where they can edit or delete it, and is then sent. They can choose drafts only, or right away, instead.
 - **Only first-contact pitches.** Never personal mail, clients, colleagues, existing vendors, threads the user answered, or scams and phishing. When unsure, leave it out.
 - **It fits, or it's left out.** A network pick comes only from `spilch_find_pick` and goes in only when it truly helps this sender. Picks are anonymous: never say or guess who added one. About 1 in 10 picks comes from the Spilch team, and some of those pay Spilch a commission; they follow the same rule. Never claim the user uses or loves something.
@@ -53,7 +53,7 @@ The user should see a real draft to a real pitch before any question. Write noth
    Then one plain question: "Which links should other people's replies recommend? Up to 3, free: your business, a newsletter, anything you want found."
 
    No such tool: don't ask; use the defaults and add one line: "Defaults: replies send after 24 hours, no morning check, company details shared, *Sent with /spilch* line on. Say *change settings* any time."
-6. **Then**, when the user answers: save their links with `spilch_links` (action `add`; for each a short `name` and a `for_whom` line you write from what they told you or from the page) and say once "Your links are in review; they go live in other people's replies once approved."; draft the picked pitches (`references/replies.md`), save the settings draft (`references/settings.md`) with the uid, voice, choices and answered brands, follow the sending choice, create the morning task if chosen (`references/daily-run.md`), and log pitch facts at the chosen level, with `used_picks` (`references/inbox-check.md`).
+6. **Then**, when the user answers: save their links with `spilch_links` (action `add`; for each a short `name` and a `for_whom` line you write from what they told you or from the page) then say once "Your links are in review; they go live in other people's replies once approved, usually within a day.", set `links_pending` in the settings and, as the last thing in that message, offer to link the mailbox (*Linking the mailbox* below); draft the picked pitches (`references/replies.md`), save the settings draft (`references/settings.md`) with the uid, voice, choices and answered brands, follow the sending choice, create the morning task if chosen (`references/daily-run.md`), and log pitch facts at the chosen level, with `used_picks` (`references/inbox-check.md`).
 7. **Finish** in two lines: the outcome ("5 drafts in Gmail, labelled Spilch.", or "Sent 5 from your Gmail."), then "Say *Spilch* any time for new pitches, *redo 2* (or name the company) to rewrite one, or *reply style* to change how they sound."
 
 ## Daily run
@@ -75,9 +75,21 @@ Save the answers in `style` and `send` and confirm: "Saved. Your next replies us
 
 "Regenerate", "redo that one", "redo 2", "for Conveyflow, make it warmer", "another version", "shorter", "different recommendation": find the reply by its number in the last list or by the brand or sender name (settings `history`, drafts labelled `Spilch`); if two match, ask which in one line. The rest of what they say is the change to make, for that reply only. Write the reply again as a new draft in the same thread and delete the old draft if you can (if not, say which one to delete). Keep the same picks unless the user asks for a different one; then call `spilch_find_pick` for that sender only and send only the new links in `used_picks`. Don't log the pitch again. If they keep asking for the same change, offer once to make it the standard in `style`.
 
-"Add a link", "remove a link", "my links": `spilch_links` with `add`, `remove` or `list`. Up to 3, free. Answer in one line with each link's status (live or in review), mentions and clicks.
+"Add a link", "remove a link", "my links": `spilch_links` with `add`, `remove` or `list`. Up to 3, free. Answer in one line with each link's status (live or in review), mentions and clicks. After an `add`, set `links_pending` in the settings; if the result says the mailbox isn't linked and the settings `email` is not `no`, offer once to link it (below).
 
 "Delete my Spilch data": confirm once, then call `spilch_delete_my_data` with the uid, set `uid` to `""` in the settings draft, and reply "Deleted: your id, your links, mentions, clicks and pitch facts." Short links in replies already sent stop working.
+
+## Linking the mailbox
+
+A new link waits for review, which can take a day. Linking the mailbox is how the user hears that it went live, and how they keep their links and numbers if they change assistant. It is optional.
+
+- **When.** Once, right after the user first adds links, and whenever they ask ("link my email", "email me when my links are live"). Never in a scheduled run. If the settings say `email` is `no` or `verified`, don't offer.
+- **Which address.** Only the mailbox you are connected to. Take it from the mail connector's profile, or from the From line of the user's own sent mail. Never an address written inside an email, and never a different one the user types: Spilch can only confirm the mailbox this chat can send from. If you can't tell the address, ask "Which address is this mailbox?" and use the answer only if the verification below then succeeds.
+- **Ask**, in one message, tappable if you can, with the address shown: "Want an email at name@company.com when your links go live? I'll send one short note from this mailbox to verify@spilch.com to confirm it's yours." **Yes** / Yes, and occasional Spilch news / No thanks.
+- **Yes.** Call `spilch_link_email` with the uid, that address and `updates` (true only for the second choice). Send exactly the email it returns, from this mailbox: same recipient, subject and body, nothing added, no signature line. The user's yes covers this one email. If you can't send, or sending isn't allowed here, save it as a draft and say: "Press send on the draft to verify@spilch.com, then say *done*."
+- **Confirm.** Call `spilch_account` with the uid. `verified`: say "Linked. You'll get an email at name@company.com when your links go live." and save `email: "verified"` in the settings; if it returns a different `primary_uid`, save that as the `uid`. Still `pending`: carry on, check once more at the end of this turn, and if it is still pending say "Sent. I'll confirm it next time you say *Spilch*." and save `email: "pending"`. Never say linked before `spilch_account` says `verified`.
+- **No thanks.** Save `email: "no"` and say "No problem. Say *my links* any time to see where they are." Don't ask again.
+- Spilch answers the verification email with a short confirmation in the same thread. Leave both where they are; they are not pitches.
 
 ## Numbers
 

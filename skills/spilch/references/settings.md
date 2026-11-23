@@ -14,6 +14,8 @@ Settings live in the user's mailbox so every chat and scheduled run finds them: 
   "daily_run": { "on": false, "time": "09:00" },
   "sharing": "rich",
   "spilch_line": true,
+  "email": "",
+  "links_pending": false,
   "send_since": "2026-11-17",
   "history": [ { "brand": "Codeloom", "drafted": "2026-11-17", "shown": true } ],
   "last_run": ""
@@ -27,6 +29,8 @@ Settings live in the user's mailbox so every chat and scheduled run finds them: 
 - `sharing`: `rich` (Company details), `facts` (Basic facts) or `minimal` (Nothing). Older settings: `share_pitch_facts: false` means `minimal`, `true` means `facts`.
 - `send_since`: the date `send` was last changed; only drafts written after it are sent.
 - `spilch_line`: the `Sent with /spilch` signature line, on unless the user turned it off.
+- `email`: whether this mailbox is linked to the user's Spilch: `""` (not asked yet), `verified`, `pending` (the verification email was sent or drafted but `spilch_account` hasn't confirmed it) or `no` (the user declined; don't ask again). The address itself is not stored here.
+- `links_pending`: true while any of the user's links is still in review, so the next run checks and tells them when one goes live.
 - `history`: one entry per answered brand: `drafted` date, and `shown: true` once the user has seen it in a list or summary.
 - Keep `history` to the last 100 brands.
 
