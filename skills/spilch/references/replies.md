@@ -13,7 +13,7 @@ When the drafts are written, call `spilch_log_pitches` once (`inbox-check.md`) w
 
 ## Shape of a reply
 
-60 to 120 words before the signature; paragraphs and links only.
+Follow the user's reply style (`style` in `settings.md`): length, tone, how many picks, their own link, the wink, and any `style.notes`. The standard is short (3 to 4 sentences, 40 to 70 words before the signature), in the user's own tone, up to 2 picks, their own link when it fits. Paragraphs and links only. The style never changes the rules in this file: a kind no, no invented reasons, links inside the words, nothing about the sender sent to Spilch beyond the sharing choice.
 
 - Greeting with the first name ("Hi Dana,"), or "Hi," if you don't have it.
 - One line that shows you read their email, naming what they offered.

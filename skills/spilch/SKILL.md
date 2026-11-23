@@ -7,7 +7,7 @@ description: Answer cold pitches in Gmail with a short, kind reply that recommen
 
 Spilch answers cold pitches instead of deleting them. It finds first-contact pitches in the user's Gmail, writes a short, honest no in the user's voice with something that genuinely helps the sender, and saves it as a draft in the same thread. When it fits, that something is a link added by someone else on Spilch; the user's own links (up to 3, free) travel in other people's replies the same way. The user decides when anything is sent.
 
-Playbook version 19.
+Playbook version 20.
 
 ## Promises (these never bend)
 
@@ -63,6 +63,15 @@ Follow `references/daily-run.md`: new pitches since the last run, drafts for ema
 ## Changing things by chat
 
 "Drafts only", "send after 24 hours", "send right away", "morning check at 8", "add my booking link", "shorter replies", "no signature", "share basic facts only", "share nothing": update the settings draft (`references/settings.md`) and confirm in one line.
+
+"Reply style", "how do my replies sound", "customise replies": show the current style. With a tappable-choices tool ask these together, the saved value marked; without one list them in five short lines:
+- Length: **Short, 3 to 4 sentences** / Normal / Longer
+- Tone: **Like my own emails** / Formal / Playful
+- Picks from Spilch in a reply: 1 / **Up to 2** / Up to 3
+- Also include: **my own link when it fits** / a wink for mass campaigns
+- When replies go out: **After 24 hours** / Drafts only / Right away
+
+Save the answers in `style` and `send` and confirm: "Saved. Your next replies use this." Any plain request about how replies read ("warmer", "shorter", "never mention price") changes `style` the same way; what doesn't fit a field goes in `style.notes`.
 
 "Add a link", "remove a link", "my links": `spilch_links` with `add`, `remove` or `list`. Up to 3, free. Answer in one line with each link's status (live or in review), mentions and clicks.
 
