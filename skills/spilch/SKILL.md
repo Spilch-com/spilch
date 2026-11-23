@@ -54,7 +54,7 @@ The user should see a real draft to a real pitch before any question. Write noth
 
    No such tool: don't ask; use the defaults and add one line: "Defaults: replies send after 24 hours, no morning check, company details shared, *Sent with /spilch* line on. Say *change settings* any time."
 6. **Then**, when the user answers: save their links with `spilch_links` (action `add`; for each a short `name` and a `for_whom` line you write from what they told you or from the page) and say once "Your links are in review; they go live in other people's replies once approved."; draft the picked pitches (`references/replies.md`), save the settings draft (`references/settings.md`) with the uid, voice, choices and answered brands, follow the sending choice, create the morning task if chosen (`references/daily-run.md`), and log pitch facts at the chosen level, with `used_picks` (`references/inbox-check.md`).
-7. **Finish** in two lines: the outcome ("5 drafts in Gmail, labelled Spilch.", or "Sent 5 from your Gmail."), then "Say *Spilch* any time for new pitches."
+7. **Finish** in two lines: the outcome ("5 drafts in Gmail, labelled Spilch.", or "Sent 5 from your Gmail."), then "Say *Spilch* any time for new pitches, *redo 2* to rewrite one, or *reply style* to change how they sound."
 
 ## Daily run
 
@@ -72,6 +72,8 @@ Follow `references/daily-run.md`: new pitches since the last run, drafts for ema
 - When replies go out: **After 24 hours** / Drafts only / Right away
 
 Save the answers in `style` and `send` and confirm: "Saved. Your next replies use this." Any plain request about how replies read ("warmer", "shorter", "never mention price") changes `style` the same way; what doesn't fit a field goes in `style.notes`.
+
+"Regenerate", "redo that one", "another version", "shorter", "different recommendation": write the reply again as a new draft in the same thread and delete the old draft if you can (if not, say which one to delete). Keep the same picks unless the user asks for a different one; then call `spilch_find_pick` for that sender only and send only the new links in `used_picks`. Don't log the pitch again. If they keep asking for the same change, offer once to make it the standard in `style`.
 
 "Add a link", "remove a link", "my links": `spilch_links` with `add`, `remove` or `list`. Up to 3, free. Answer in one line with each link's status (live or in review), mentions and clicks.
 
