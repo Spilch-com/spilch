@@ -4,11 +4,9 @@ Settings live in the user's mailbox so every chat and scheduled run finds them: 
 
 ```json
 {
-  "version": 3,
+  "version": 4,
   "uid": "u_ab12cd34ef56gh78",
-  "links": [
-    { "url": "https://cal.com/ion/intro", "for": "founders who want a quick intro call" }
-  ],
+  "links": ["Conveyflow"],
   "voice": { "greeting": "Hi", "signoff": "Best,\nIon", "formality": "friendly", "length": "normal" },
   "send": "drafts",
   "auto_send": false,
@@ -21,6 +19,7 @@ Settings live in the user's mailbox so every chat and scheduled run finds them: 
 }
 ```
 
+- `links`: just the names of the links saved with `spilch_links`, as a reminder; the Spilch server holds them (up to 3). Older settings with link objects: offer once to add them with `spilch_links`.
 - `uid` comes only from `spilch_register`; never make one up. Without the Spilch connector save `""`; the first run that has the connector registers and saves it.
 - `send`: `drafts` (nothing is sent; the user sends from Gmail), `24h` (sent 24 hours after drafting unless the user deleted or emptied it) or `now` (sent as soon as it's written, only for emails the user picked or labelled; pitches Spilch found on its own still wait 24 hours). Also write `auto_send` (true for `24h` or `now`) so older saved Spilch skills read it right; in older settings without `send`, `auto_send: true` means `24h`.
 - `sharing`: `rich` (Company details), `facts` (Basic facts) or `minimal` (Nothing). Older settings: `share_pitch_facts: false` means `minimal`, `true` means `facts`.
