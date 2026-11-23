@@ -3,8 +3,8 @@
 For each picked or labelled email:
 
 1. Read the thread. If it turns out personal, from someone the user knows, or already answered, skip it and say so in a few words.
-2. Pick one or two recommendations (rules below). Three only when each clearly helps.
-3. With the Spilch connector, call `spilch_create_link` for each link (uid, url, a short label like "seo agency"; never names or addresses) and use the `short_url`, so clicks can be counted.
+2. **Network pick first.** With the Spilch connector, call `spilch_find_pick` with the uid and 2 to 5 topics about what the sender does or sells ("seo", "agencies"); never names, addresses or email text. If a pick truly helps this sender, call `spilch_create_link` with the uid and its `pick_id` and use the `short_url`; that counts the mention for whoever added it. Use every pick that truly helps this sender: one or two is usual, three at most, and never one that doesn't fit. No pick, or none that fits: go on without one.
+3. You may add one recommendation of your own (rules below), or use it alone when there was no pick. For those, call `spilch_create_link` with the url and a short label like "seo agency", so clicks can be counted.
 4. Save the reply as a **draft reply in the same thread** and apply the `Spilch` label if the tools allow. Add the brand to `history` in the settings with today's date as `drafted`.
 
 ## Shape of a reply
@@ -40,12 +40,13 @@ Sent with <a href="https://spilch.com">/spilch</a>
 - a tool or service they would plausibly need;
 - a genuinely good, recent read, report or guide in their field (prefer the last 12 months);
 - a well-known newsletter, podcast or community in their field (prefer publications over private individuals);
-- the user's own link from the settings, only when it truly fits this sender.
 
-Always at least one. If nothing specific fits, a well-known free resource for their field.
+If nothing fits, a well-known free resource for their field, or nothing: a kind no on its own is fine.
+
+**Network picks are anonymous.** Write them like any other recommendation. Never say or guess who added one, and never call it sponsored or a partner. The user's own link (from `spilch_links`, action `list`) can go in their own reply too, when it truly fits this sender: link it with `spilch_create_link` and its url. That is not a network mention; mentions come from other people's replies.
 
 **Real and checked.** Every link must exist. Find it with web search and open it with web fetch when you can; use the canonical page. Never invent a URL, title, author, statistic or discount. If you can't check links, recommend only widely known tools and publications by their homepage.
 
-**On merit only.** No affiliate links, paid placements, discount codes or anything someone paid for. Never claim the user has used, read or loves something. No fake urgency. Don't recommend the sender's direct competitor as a dig.
+**Your own recommendations: on merit only.** No affiliate links, discount codes or anything someone paid for. (Network picks come only from `spilch_find_pick`.) Never claim the user has used, read or loves something. No fake urgency. Don't recommend the sender's direct competitor as a dig.
 
 **Off limits.** Nothing medical, legal, investment or political; no gambling, adult, crypto tokens, weapons or anything illegal; no personal information about private people. Never reply to scams, phishing or rude spam.
