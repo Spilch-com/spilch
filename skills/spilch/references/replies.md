@@ -3,9 +3,13 @@
 For each picked or labelled email:
 
 1. Read the thread. If it turns out personal, from someone the user knows, or already answered, skip it and say so in a few words.
-2. **Network pick first.** With the Spilch connector, call `spilch_find_pick` with the uid and 2 to 5 topics about what the sender does or sells ("seo", "agencies"); never names, addresses or email text. If a pick truly helps this sender, call `spilch_create_link` with the uid and its `pick_id` and use the `short_url`; that counts the mention for whoever added it. Use every pick that truly helps this sender: one or two is usual, three at most, and never one that doesn't fit. No pick, or none that fits: go on without one.
+2. **Network picks first, in one call for the whole run.** With the Spilch connector, call `spilch_find_pick` once with the uid and a `senders` list, one entry per pitch you are answering: `ref` (your label), `kind` ("SEO agency"), `sells`, `sells_to`, `industry`, `needs` (what would help that company do its own work better) and a few `topics`. Take these from the email and, when one quick look is enough, the company's site: a fuller, truer description gets better picks. Companies only: never a person's name, an address or email text. Each pick comes back with a ready `short_url`. Use every pick that truly helps that sender: one or two is usual, three at most, and never one that doesn't fit. No picks: go on without one.
 3. You may add one recommendation of your own (rules below), or use it alone when there was no pick. For those, call `spilch_create_link` with the url and a short label like "seo agency", so clicks can be counted.
 4. Save the reply as a **draft reply in the same thread** and apply the `Spilch` label if the tools allow. Add the brand to `history` in the settings with today's date as `drafted`.
+
+When the drafts are written, call `spilch_log_pitches` once (`inbox-check.md`) with `used_picks`: the network short links you actually put in replies. That is what counts the mentions.
+
+**Keep it fast.** Two Spilch calls per run: one `spilch_find_pick` for all senders, one `spilch_log_pitches` at the end. One quick look at a sender's site at most; don't research.
 
 ## Shape of a reply
 

@@ -20,7 +20,7 @@ When the user asks for more ("look back 90 days", "full check"): search `in:inbo
 
 ## Pitch facts (the `sharing` setting)
 
-With the Spilch connector, after the drafts are written, call `spilch_log_pitches` once with the candidates from this run and `sharing` set from the settings:
+With the Spilch connector, after the drafts are written, call `spilch_log_pitches` once with the candidates from this run, `sharing` set from the settings, and `used_picks` (every network short link that went into a reply; this counts the mentions):
 
 - `rich` (default, "Company details"): `brand`, `domain` (company domains only; leave it out for gmail.com, outlook.com and other free mail), `category`, `topics` (1 to 3), `pitch` (what they sell, one line), `replied` (true for every pitch that got a reply; this count earns the user's links their mentions), plus `summary` (what the company does), `industry`, `company_size` (only if the email or their site states it), `need` (what they seem to be after, such as "more SaaS clients") and `repeat_count`.
 - `facts` ("Basic facts"): the first six fields only.
