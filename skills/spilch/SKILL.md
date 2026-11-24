@@ -7,7 +7,7 @@ description: Answer cold pitches in Gmail with a short, kind reply that recommen
 
 Spilch answers cold pitches instead of deleting them. It finds first-contact pitches in the user's Gmail, writes a short, honest no in the user's voice with something that genuinely helps the sender, and saves it as a draft in the same thread. When it fits, that something is a link added by someone else on Spilch; the user's own links (up to 3, free) travel in other people's replies the same way. The user decides when anything is sent.
 
-Playbook version 25.
+Playbook version 26.
 
 ## Promises (these never bend)
 
@@ -46,13 +46,14 @@ The user should see a real draft to a real pitch before any question. Write noth
    Spilch · your last 14 days
    7 cold pitches · 0 answered · mostly SEO and dev agencies
 
-   ☑ 1. Rankwise: free SEO audit (20 Nov) → reply drafted, recommends Ahrefs Webmaster Tools
-   ☐ 2. Codeloom: white-label builds for agencies (19 Nov)
-   ☐ 3. Brightside: lead lists for SaaS (17 Nov)
+   1. Rankwise · free SEO audit · 20 Nov
+      ✓ reply drafted, recommends Ahrefs Webmaster Tools
+   2. Codeloom · white-label builds for agencies · 19 Nov
+   3. Brightside · lead lists for SaaS · 17 Nov
    ```
 
-   Real numbers and brands only. Line two is the count, how many the user already answered, and the pattern in a few words. Then the pitches, the drafted one first, each with what it sells in under 12 words. If you can show an inline visual, show the same rows as a small card instead; never email text or addresses in it. A ticked box means a reply is drafted; an empty box is waiting. Then one line: "Your first reply is in Gmail drafts. Tick the rest to answer, reply with the numbers, or say *all*." If you have a tappable-choices tool, offer the waiting pitches as a multi-select so the user really ticks them. Use the same boxes whenever you list pitches again. No pitches in 14 days: "No cold pitches in the last 14 days. Want me to look back 90 days?" and stop.
-5. **Settings were chosen at sign-in.** Don't ask them again. In the same message add one line that names them from `spilch_settings`, in plain words: "Your settings: replies send after 24 hours, no morning check, company profile shared, *Sent with /spilch* on. Say *change settings* any time." Then one plain question: "What should other people's replies recommend for you? Up to 3 links, free: your business, an offer, today's blog post, a how-to."
+   Real numbers and brands only. Line two is the count, how many the user already answered, and the pattern in a few words. Then the pitches, numbered, the drafted one first, each on one short line: brand, what it sells in under 8 words, the date. Under a pitch that has a reply, one indented line starting with ✓ that says what the reply recommends. No checkbox characters and no emoji: they render badly in chat. If you can show an inline visual, show the same rows as a small card instead; never email text or addresses in it. Then two short lines, nothing more: "Your first reply is waiting in Gmail drafts." and "Which others should I answer? Send the numbers, or say *all*." If you have a tappable-choices tool, offer the waiting pitches as a multi-select instead of the second line. Use the same shape whenever you list pitches again. No pitches in 14 days: "No cold pitches in the last 14 days. Want me to look back 90 days?" and stop.
+5. **Settings were chosen at sign-in.** Don't ask them again. After a blank line add one line that names them from `spilch_settings`, in plain words: "Settings: replies send after 24 hours · no morning check · company profile shared · *Sent with /spilch* on. Say *change settings* any time." Then, as its own short paragraph, one plain question: "What should other people's replies recommend for you? Up to 3 links, free: your business, an offer, today's blog post, a how-to."
 
    Without the Spilch connector: skip both, and say once that replies stay drafts until Spilch is connected.
 6. **Then**, when the user answers: save their links with `spilch_links` (action `add`; for each a short `name`, a `for_whom` line you write from what they told you or from the page, its `kind` and, only if they gave one, an `offer` in their own words) and set `links_pending` in the settings; they go straight to review, because the user's address was confirmed at sign-in. Draft the picked pitches (`references/replies.md`), save `voice`, `history` and `last_run` with `spilch_settings` (`references/settings.md`), follow the sending choice, create the morning task if `daily_run.on` (`references/daily-run.md`), and log pitch facts at the chosen level, with `used_picks` (`references/inbox-check.md`).
