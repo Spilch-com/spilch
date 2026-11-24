@@ -26,7 +26,7 @@ After that, say **Spilch** any time, label an email `Spilch` in Gmail, or turn o
 - To delete everything stored under your id, ask your assistant to "delete my Spilch data".
 - If you keep the "Sent with /spilch" line on, replies end with it, linking to spilch.com. Say "no signature" to drop it.
 - The network is anonymous: a sender sees a recommendation, never who added it. Mentions are earned by replying, not bought.
-- About 1 in 10 picks comes from the Spilch team, and some of those pay us a commission. That funds Spilch. They follow the same rule as every pick: it fits the sender, or it is left out.
+- Some picks are added by the Spilch team to get the network started: plain links to well-known tools and resources. Nobody pays to be recommended, and there are no affiliate links. They follow the same rule as every pick: it fits the sender, or it is left out.
 
 Privacy policy: https://spilch.com/privacy · Terms: https://spilch.com/terms · Support: i@asder.xyz
 
