@@ -2,7 +2,7 @@
   "name": "spilch",
   "displayName": "Spilch",
   "version": "1.4.1",
-  "description": "Answer cold pitches instead of deleting them. Spilch finds the pitches in your Gmail, writes a short, kind no in your voice with something genuinely useful for the sender, often a link from someone else on Spilch, and saves it as a draft. Your own links (up to 3, free) travel in other people's replies. You choose when anything is sent.",
+  "description": "Answer cold pitches instead of deleting them. Spilch finds the pitches in your inbox, writes a short, kind no in your voice with something useful for the sender, and saves it as a draft. You choose when anything is sent.",
   "author": {
     "name": "Asder S.R.L.",
     "email": "i@asder.xyz",
@@ -20,6 +20,7 @@
   ],
   "icon": "./assets/icon.png",
   "documentationUrl": "https://github.com/Spilch-com/spilch#readme",
+  "supportUrl": "https://github.com/Spilch-com/spilch/issues",
   "privacyPolicyUrl": "https://spilch.com/privacy",
   "termsOfServiceUrl": "https://spilch.com/terms"
 }
