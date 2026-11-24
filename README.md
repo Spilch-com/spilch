@@ -16,8 +16,8 @@ After that, say **Spilch** any time, label an email `Spilch` in Gmail, or turn o
 
 - **Your mail stays in your mailbox.** Spilch reads and writes mail only through your assistant's own Gmail connector. Your settings are a draft in your Gmail called "Spilch settings (keep this draft)".
 - **The Spilch connector (spilch.com/mcp/core) never receives email text, people's names or email addresses.** It stores an anonymous id, the links you add for the network (up to 3: a link, a short name, who it helps, its kind and an optional offer), your own email address once you verify it (needed only to submit links), how often they were used in other people's replies and clicked, how many replies you wrote, the short links in your replies with their click counts, and facts about the companies that pitched you, at the level you choose:
-  - *Company details* (default): brand, company domain, category, topics, a one-line description of the pitch, whether you replied, a short company summary, industry, rough size, what they seem to need, and how often they pitched you.
-  - *Basic facts*: brand, company domain, category, topics, the one-line pitch and whether you replied.
+  - *Company profile* (default): brand, company domain, category, topics, a one-line description of the pitch, whether you replied, a short company summary, industry, rough size, what they seem to need, and how often they pitched you.
+  - *Name and pitch*: brand, company domain, category, topics, the one-line pitch and whether you replied.
   - *Nothing*: nothing about the companies is sent; only the number of replies you wrote is counted.
 - Short links (spilch.com/r/…) redirect to the page you recommended and count the click; the server keeps the time and country of the click, nothing about who clicked.
 - To find links that fit, your assistant also sends a short description of each company that pitched you (what it is, what it sells, who to, what would help it). It is used for matching and not stored.

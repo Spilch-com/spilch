@@ -54,12 +54,12 @@ The user should see a real draft to a real pitch before any question. Write noth
 5. **Settings, by tapping.** In the same message, if you have a tappable-choices tool, ask these four together, first choice of each as the default:
    - When replies go out: **After 24 hours** (edit or delete the draft to stop it) / Drafts only (you press send in Gmail) / Right away for the ones you pick
    - Morning check at 09:00: **Off** / On
-   - What Spilch learns about the companies that pitch you (never email text, names or addresses): **Company details** / Basic facts / Nothing
+   - What Spilch learns about the companies that pitch you (never email text, names or addresses): **Company profile** / Name and pitch / Nothing
    - End replies with "Sent with /spilch": **On** / Off
 
    Then one plain question: "What should other people's replies recommend for you? Up to 3 links, free: your business, an offer, today's blog post, a how-to. To submit them I verify this mailbox with one short email."
 
-   No such tool: don't ask; use the defaults and add one line: "Defaults: replies send after 24 hours, no morning check, company details shared, *Sent with /spilch* line on. Say *change settings* any time."
+   No such tool: don't ask; use the defaults and add one line: "Defaults: replies send after 24 hours, no morning check, company profile shared, *Sent with /spilch* line on. Say *change settings* any time."
 6. **Then**, when the user answers: save their links with `spilch_links` (action `add`; for each a short `name`, a `for_whom` line you write from what they told you or from the page, its `kind` and, only if they gave one, an `offer` in their own words), set `links_pending` in the settings and, as the last thing in that message, verify the mailbox so the links can go to review (*Linking the mailbox* below); draft the picked pitches (`references/replies.md`), save the settings draft (`references/settings.md`) with the uid, voice, choices and answered brands, follow the sending choice, create the morning task if chosen (`references/daily-run.md`), and log pitch facts at the chosen level, with `used_picks` (`references/inbox-check.md`).
 7. **Finish** in two lines: the outcome ("5 drafts in Gmail, labelled Spilch.", or "Sent 5 from your Gmail."), then "Say *Spilch* any time for new pitches, *redo 2* (or name the company) to rewrite one, or *reply style* to change how they sound."
 
@@ -69,7 +69,7 @@ Follow `references/daily-run.md`: new pitches since the last run, drafts for ema
 
 ## Changing things by chat
 
-"Drafts only", "send after 24 hours", "send right away", "morning check at 8", "add my booking link", "shorter replies", "no signature", "share basic facts only", "share nothing": update the settings draft (`references/settings.md`) and confirm in one line.
+"Drafts only", "send after 24 hours", "send right away", "morning check at 8", "add my booking link", "shorter replies", "no signature", "share name and pitch only", "share nothing": update the settings draft (`references/settings.md`) and confirm in one line.
 
 "Reply style", "how do my replies sound", "customise replies": show the current style. With a tappable-choices tool ask these together, the saved value marked; without one list them in five short lines:
 - Length: **Short, 3 to 4 sentences** / Normal / Longer
