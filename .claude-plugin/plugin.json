@@ -1,7 +1,7 @@
 {
   "name": "spilch",
   "displayName": "Spilch",
-  "version": "1.2.0",
+  "version": "1.3.1",
   "description": "Answer cold pitches instead of deleting them. Spilch finds the pitches in your Gmail, writes a short, kind no in your voice with something genuinely useful for the sender, often a link from someone else on Spilch, and saves it as a draft. Your own links (up to 3, free) travel in other people's replies. You choose when anything is sent.",
   "author": {
     "name": "Asder S.R.L.",

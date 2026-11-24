@@ -9,6 +9,7 @@ Shapes:
 - First run: `First reply drafted: Rankwise (free SEO audit) → recommends Plausible. It's in your Gmail drafts.`
 - Network: `Your links were recommended 6 times this month. 2 people clicked.`
 - First mention: `Someone on Spilch recommended Conveyflow today. First one.`
+- Link live: `Conveyflow is live. Other people's replies can recommend it now.`
 - Quiet day: `No new pitches. Your inbox had a calm day.`
 - Repeat sender: `Brightside wrote for the third time. They got a kind no and a pricing report.`
 - Busy week: `31 pitches this week. That's a full-time job you didn't take.`
