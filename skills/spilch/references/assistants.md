@@ -12,7 +12,7 @@ Tool names and abilities differ. Use what the assistant actually has; when a ste
 ## Claude Code and Cowork
 
 - Gmail tools come from a connected Gmail connector; if none is connected, ask the user to connect one.
-- If there's no tappable-choices tool, ask the three settings questions as one short numbered question, defaults in bold.
+- If there's no tappable-choices tool, don't ask the four settings questions: use the defaults and show the one "Defaults: …" line from `SKILL.md`.
 
 ## ChatGPT and other assistants
 

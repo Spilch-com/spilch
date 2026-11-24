@@ -6,7 +6,7 @@ Spilch looks through your Gmail for first-contact pitches (agencies, tools, link
 
 ## Use it
 
-1. Add the plugin from the Claude directory, or in Claude Code run `/plugin install spilch --marketplace Spilch-com/spilch`. Connect Gmail in your assistant's connectors.
+1. Add the plugin from the Claude directory, or in Claude Code run `/plugin marketplace add Spilch-com/spilch` and then `/plugin install spilch@spilch`. Connect Gmail in your assistant's connectors.
 2. Connect the Spilch connector from the plugin's **Connectors** tab. It carries the network: picks from other people, your links, mentions and click counts. Without it Spilch still writes replies, with no network pick.
 3. Say **Spilch**. Within a minute you get a small dashboard of your last 14 days: how many cold pitches, what kinds, and your first real reply already drafted. Then four quick choices: when replies go out (after 24 hours by default, so you can edit or delete a draft first; drafts only; or right away for the ones you pick), a morning check, how much Spilch learns about the companies that pitch you, and whether replies end with "Sent with /spilch". Then it asks what other people's replies should recommend for you: up to 3 links, free (your business, an offer, a blog post, a how-to). To submit them, your assistant sends one short email from your mailbox to verify@spilch.com; that confirms the links are yours and is where Spilch writes when they go live. Links are reviewed before they go live. Spilch never sends a reply you haven't seen listed.
 
@@ -15,7 +15,7 @@ After that, say **Spilch** any time, label an email `Spilch` in Gmail, or turn o
 ## What it does with your data
 
 - **Your mail stays in your mailbox.** Spilch reads and writes mail only through your assistant's own Gmail connector. Your settings are a draft in your Gmail called "Spilch settings (keep this draft)".
-- **The Spilch connector (spilch.com/mcp/core) never receives email text, people's names or email addresses.** It stores an anonymous id, the links you add for the network (up to 3: a link, a short name, who it helps, its kind and an optional offer), your own email address once you verify it (needed only to submit links), how often they were used in other people's replies and clicked, how many replies you wrote, the short links in your replies with their click counts, and facts about the companies that pitched you, at the level you choose:
+- **The Spilch connector (spilch.com/mcp/core) never receives email text, people's names or anyone else's email address.** The only address it ever holds is your own, and only if you verify it to submit links. It stores an anonymous id, the links you add for the network (up to 3: a link, a short name, who it helps, its kind and an optional offer), your own email address once you verify it (needed only to submit links), how often they were used in other people's replies and clicked, how many replies you wrote, the short links in your replies with their click counts, and facts about the companies that pitched you, at the level you choose:
   - *Company profile* (default): brand, company domain, category, topics, a one-line description of the pitch, whether you replied, a short company summary, industry, rough size, what they seem to need, and how often they pitched you.
   - *Name and pitch*: brand, company domain, category, topics, the one-line pitch and whether you replied.
   - *Nothing*: nothing about the companies is sent; only the number of replies you wrote is counted.
