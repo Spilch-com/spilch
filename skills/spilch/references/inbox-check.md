@@ -26,4 +26,4 @@ With the Spilch connector, after the drafts are written, call `spilch_log_pitche
 - `facts` ("Name and pitch"): the first six fields only.
 - `minimal` ("Nothing"): call it with `sharing: "minimal"` and one item per reply written, `{ "brand": "-", "replied": true }`. Nothing about the companies is stored; only the number of replies is counted, which is what earns the user's links their mentions.
 
-Facts are about companies, never people: no names, email addresses, phone numbers or email text, in any field. If a fact isn't clear from the email or the company's public site, leave it out rather than guess.
+Facts are about companies, never people: no names, email addresses, phone numbers or email text, in any field. When the sender is one person trading under their own name (a freelancer, a consultant, a personal domain), log only `category`, `topics` and `replied`, with `brand` as "-" and no `domain`, `summary` or `need`. If a fact isn't clear from the email or the company's public site, leave it out rather than guess.
