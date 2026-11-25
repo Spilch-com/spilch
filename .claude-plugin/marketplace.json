@@ -6,7 +6,7 @@
   },
   "plugins": [
     {
-      "name": "spilch",
+      "name": "spilch-replies",
       "source": "./",
       "description": "Answer cold pitches in Gmail with a kind no and a useful recommendation, saved as a draft."
     }

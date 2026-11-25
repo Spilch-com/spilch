@@ -6,7 +6,7 @@ Spilch looks through your Gmail for first-contact pitches (agencies, tools, link
 
 ## Use it
 
-1. Add the plugin from the Claude directory, or in Claude Code run `/plugin marketplace add Spilch-com/spilch` and then `/plugin install spilch@spilch`. Connect Gmail in your assistant's connectors.
+1. Add the plugin from the Claude directory, or in Claude Code run `/plugin marketplace add Spilch-com/spilch` and then `/plugin install spilch-replies@spilch`. Connect Gmail in your assistant's connectors.
 2. Connect the Spilch connector from the plugin's **Connectors** tab. It opens Spilch's sign-in page: confirm your email with a 6-digit code (or Google), then pick four settings: when replies go out (after 24 hours by default, so you can edit or delete a draft first; drafts only; or right away for the ones you pick), a morning check, how much Spilch learns about the companies that pitch you, and whether replies end with "Sent with /spilch". Without the connector Spilch still writes replies, as drafts only and with no network pick.
 3. Say **Spilch**. Within a minute you get a small dashboard of your last 14 days: how many cold pitches, what kinds, and your first real reply already drafted. Then it asks what other people's replies should recommend for you: up to 3 links, free (your business, an offer, a blog post, a how-to). Links are reviewed before they go live. Spilch never sends a reply you haven't seen listed.
 
@@ -15,7 +15,7 @@ After that, say **Spilch** any time, label an email `Spilch` in Gmail, or turn o
 ## What it does with your data
 
 - **Your mail stays in your mailbox.** Spilch reads and writes mail only through your assistant's own Gmail connector.
-- **The Spilch connector (spilch.com/mcp/account) never receives email text, people's names or anyone else's email address.** It stores:
+- **The Spilch connector (spilch.com/mcp) never receives email text, people's names or anyone else's email address.** It stores:
   - your own email address, from sign-in, which is how Spilch knows your links are yours and where it writes when they go live;
   - your settings, and what your assistant keeps between runs: your greeting and sign-off, your reply style, and a list of the mail threads already answered (a thread id, when the draft was written and, unless you chose *Nothing* below, the company's name);
   - the links you add for the network (up to 3: a link, a short name, who it helps, its kind and an optional offer), how often they were used in other people's replies and clicked, how many replies you wrote, and the short links in your replies with their click counts;
@@ -37,6 +37,6 @@ Privacy policy: https://spilch.com/privacy · Terms: https://spilch.com/terms ·
 ## Files
 
 - `skills/spilch/SKILL.md` and `skills/spilch/references/`: the Spilch playbook.
-- `.mcp.json`: the Spilch connector, https://spilch.com/mcp/account.
+- `.mcp.json`: the Spilch connector, https://spilch.com/mcp.
 
 Made by Asder S.R.L. MIT licence.

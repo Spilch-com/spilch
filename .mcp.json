@@ -2,7 +2,7 @@
   "mcpServers": {
     "spilch": {
       "type": "http",
-      "url": "https://spilch.com/mcp/account"
+      "url": "https://spilch.com/mcp"
     }
   }
 }
