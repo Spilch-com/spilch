@@ -15,7 +15,7 @@ After that, say **Spilch** any time, label an email `Spilch` in Gmail, or turn o
 ## What it does with your data
 
 - **Your mail stays in your mailbox.** Spilch reads and writes mail only through your assistant's own Gmail connector.
-- **The Spilch connector (spilch.com/mcp/account) never receives email text, people's names or anyone else's email address.** It stores:
+- **The Spilch connector (spilch.com/mcp) never receives email text, people's names or anyone else's email address.** It stores:
   - your own email address, from sign-in, which is how Spilch knows your links are yours and where it writes when they go live;
   - your settings, and what your assistant keeps between runs: your greeting and sign-off, your reply style, and a list of the mail threads already answered (a thread id, when the draft was written and, unless you chose *Nothing* below, the company's name);
   - the links you add for the network (up to 3: a link, a short name, who it helps, its kind and an optional offer), how often they were used in other people's replies and clicked, how many replies you wrote, and the short links in your replies with their click counts;
@@ -37,6 +37,6 @@ Privacy policy: https://spilch.com/privacy · Terms: https://spilch.com/terms ·
 ## Files
 
 - `skills/spilch/SKILL.md` and `skills/spilch/references/`: the Spilch playbook.
-- `.mcp.json`: the Spilch connector, https://spilch.com/mcp/account.
+- `.mcp.json`: the Spilch connector, https://spilch.com/mcp.
 
 Made by Asder S.R.L. MIT licence.

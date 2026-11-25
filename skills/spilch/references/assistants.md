@@ -18,4 +18,4 @@ Tool names and abilities differ. Use what the assistant actually has; when a ste
 
 - Some mail connectors can read but not write drafts. Then show each reply as text with the thread's subject so the user can paste it, and say once: "Your mail connector can't save drafts here, so copy these into Gmail."
 - If there's no scheduler, the user says *Spilch* to run the check.
-- The Spilch connector works anywhere that accepts a remote MCP server URL: https://spilch.com/mcp/account. The assistant opens Spilch's sign-in page when it is added.
+- The Spilch connector works anywhere that accepts a remote MCP server URL: https://spilch.com/mcp. The assistant opens Spilch's sign-in page when it is added.
