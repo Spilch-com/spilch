@@ -1,10 +1,10 @@
 {
   "name": "spilch",
   "displayName": "Spilch",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "Answer cold pitches instead of deleting them. Spilch finds the pitches in your inbox, writes a short, kind no in your voice with something useful for the sender, and saves it as a draft. You choose when anything is sent.",
   "author": {
-    "name": "Asder S.R.L.",
+    "name": "asder.xyz",
     "email": "i@asder.xyz",
     "url": "https://spilch.com"
   },
