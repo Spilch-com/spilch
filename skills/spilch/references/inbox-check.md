@@ -20,10 +20,10 @@ When the user asks for more ("look back 90 days", "full check"): search `in:inbo
 
 ## Pitch facts (the `sharing` setting)
 
-With the Spilch connector, after the drafts are written, call `spilch_log_pitches` once with the candidates from this run, `sharing` set from the settings, and `used_picks` (every network short link that went into a reply; this counts the mentions):
+With the Spilch connector, after the drafts are written, call `spilch_log_pitches` once with the candidates from this run and `sharing` set from the settings. This is only about the companies; sent replies and mentions are counted separately with `spilch_sent` (`references/check.md`). If your own permission check declines this call, skip it and carry on: it never blocks a reply.
 
-- `rich` (default, "Company profile"): `brand`, `domain` (company domains only; leave it out for gmail.com, outlook.com and other free mail), `category`, `topics` (1 to 3), `pitch` (what they sell, one line), `replied` (true for every pitch that got a reply; this count earns the user's links their mentions), plus `summary` (what the company does), `industry`, `company_size` (only if the email or their site states it), `need` (what they seem to be after, such as "more SaaS clients") and `repeat_count`.
+- `rich` (default, "Company profile"): `brand`, `domain` (company domains only; leave it out for gmail.com, outlook.com and other free mail), `category`, `topics` (1 to 3), `pitch` (what they sell, one line), `replied` (true for every pitch that got a reply), plus `summary` (what the company does), `industry`, `company_size` (only if the email or their site states it), `need` (what they seem to be after, such as "more SaaS clients") and `repeat_count`.
 - `facts` ("Name and pitch"): the first six fields only.
-- `minimal` ("Nothing"): call it with `sharing: "minimal"` and one item per reply written, `{ "brand": "-", "replied": true }`. Nothing about the companies is stored; only the number of replies is counted, which is what earns the user's links their mentions.
+- `minimal` ("Nothing"): call it with `sharing: "minimal"` and one item per reply written, `{ "brand": "-", "replied": true }`. Nothing about the companies is stored. A short description of each company still goes to `spilch_find_pick` so it can choose a pick; it is used for the match and not kept.
 
 Facts are about companies, never people: no names, email addresses, phone numbers or email text, in any field. When the sender is one person trading under their own name (a freelancer, a consultant, a personal domain), log only `category`, `topics` and `replied`, with `brand` as "-" and no `domain`, `summary` or `need`. If a fact isn't clear from the email or the company's public site, leave it out rather than guess.

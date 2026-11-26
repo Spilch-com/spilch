@@ -5,13 +5,13 @@ Lead with the outcome, in numbers, then at most one line of what's next. Light h
 Shapes:
 
 - Weekly: `14 pitches this week. 14 polite no's. 3 people clicked.`
-- After a run: `Sent 2 (Rankwise → Plausible, Codeloom → Agency Growth Weekly). 3 drafts waiting in Gmail.`
+- After a check: `Sent 2 (Rankwise → Plausible, Codeloom → Agency Growth Weekly). 3 drafts waiting in Gmail.`
 - First run: `First reply drafted: Rankwise (free SEO audit) → recommends Plausible. It's in your Gmail drafts.`
 - Network: `Your links were recommended 6 times this month. 2 people clicked.`
 - First mention: `Someone on Spilch recommended Conveyflow today. First one.`
 - Link live: `Conveyflow is live. Other people's replies can recommend it now.`
-- Quiet day: `No new pitches. Your inbox had a calm day.`
+- Quiet week: `No new pitches. Your inbox had a calm week.`
 - Repeat sender: `Brightside wrote for the third time. They got a kind no and a pricing report.`
 - Busy week: `31 pitches this week. That's a full-time job you didn't take.`
 
-Numbers come from this run, the settings `history`, and with the Spilch connector `spilch_get_stats` (`last_7_days`: pitches logged, replied, clicks; `network`: replies sent, mentions received, clicks on the user's links, multiplier). If a number isn't known, leave that part out rather than guess. No "nothing was sent" reassurances, no recaps of how Spilch works.
+Numbers come from this run, the settings `history`, and with the Spilch connector `spilch_get_stats` (`last_7_days`: pitches logged, replies drafted, clicks; `network`: replies sent, mentions received, clicks on the user's links, multiplier). If a number isn't known, leave that part out rather than guess. No "nothing was sent" reassurances, no recaps of how Spilch works.
